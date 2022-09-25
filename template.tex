@@ -1,8 +1,9 @@
 \documentclass[
     a4paper, %
     stu,     % jou (journal), man (journal submission), stu (student paper), doc (normal)
-    british, % british, danish
 ]{apa7}
+\usepackage[british]{babel}
+
 \usepackage[style=apa,backend=biber]{biblatex}
 \addbibresource{references.bib}
 
@@ -34,9 +35,19 @@
 \maketitle
 % ------------------------------------------------------------------------------
 % Content
-You can then write some text here. You can also do a narrative citation, such as
-\textcite{soelvsten2022:TACAS}, and a parenthetical citation, e.g.\
-\parencite{soelvsten2022:TACAS}.
+\section{Introduction}
+To write a paragraph, you just write it in the input file, as you normally
+would. To start another paragraph, you just need to use a double line break.
+
+For example, here starts a new paragraph.
+
+\subsection{Citations}
+\LaTeX\ makes citations really easy. The information is placed in the
+\emph{references.bib} file and then you can do a narrative citation, such as
+\textcite{soelvsten2022:TACAS}, and a parenthetical citation,
+e.g.~\parencite{soelvsten2022:TACAS}. To include page numbers in a citation, you 
+an extend the parenthetical citation with optional information,
+e.g.~\parencite[p.~64]{soelvsten2022:TACAS}.
 
 % ------------------------------------------------------------------------------
 % Bibliography
