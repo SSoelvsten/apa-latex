@@ -9,3 +9,4 @@ auto/
 *.pdf
 *.run.xml
 *.synctex.gz
+*.tex.bak

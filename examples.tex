@@ -1,0 +1,77 @@
+\documentclass[
+    a4paper, %
+    stu,     % jou (journal), man (journal submission), stu (student paper), doc (normal)
+]{apa7}
+\usepackage[british]{babel}
+\usepackage{times}
+\usepackage{csquotes}
+
+\usepackage[style=apa,backend=biber]{biblatex}
+\addbibresource{references.bib}
+
+% ------------------------------------------------------------------------------
+%                                  FRONT PAGE
+% ------------------
+% Title and Authors
+\title{APA-style \LaTeX\ Examples}
+\shorttitle{APA Examples}
+
+\leftheader{S{\o}lvsten}
+
+\author{Steffan Christ S{\o}lvsten}
+\affiliation{Department of Computer Science, Aarhus University}
+
+% Multiple authors?
+% \authorsnames{First1 Surname1, First2 Surname2}
+% \authorsaffiliation{...}
+
+% ------------------
+% Course information
+\course{\quad}
+\professor{\quad}
+\duedate{\today}
+
+\begin{document}
+% ------------------------------------------------------------------------------
+% Title Page
+\maketitle
+% ------------------------------------------------------------------------------
+% Content
+\section{Introduction}
+To write a paragraph, you just write it in the input file, as you normally
+would. To start another paragraph, you just need to use a double line break.
+
+For example, here starts a new paragraph.
+
+\subsection{Citations}
+\LaTeX\ makes citations really easy. The information is placed in the
+\emph{references.bib} file and then you can do a narrative citation, such as
+\textcite{soelvsten2022:TACAS}, and a parenthetical citation,
+e.g.~\parencite{soelvsten2022:TACAS}. To include page numbers in a citation, you 
+an extend the parenthetical citation with optional information,
+e.g.~\parencite[p.~64]{soelvsten2022:TACAS}.
+
+\subsection{Quotes}
+To add quotations, you want to use the \texttt{blockquote} command which will by
+itself make sure whether to show it inline, e.g.\
+\blockquote[Albert Einstein]{Two things are infinite: the universe and human
+stupidity; and I'm not sure about the universe.}
+If the text becomes longer than some threshold, then it is displayed
+as an indented block, such as the following
+\blockquote[Albert Einstein]{The important thing is not to stop questioning.
+Curiosity has its own reason for existence. One cannot help but be in awe when he
+contemplates the mysteries of eternity, of life, of the marvelous structure of
+reality. It is enough if one tries merely to comprehend a little of this mystery
+each day.}
+Here, the very same paragraph continues.
+
+The attribution of the quote, i.e.\ ``Albert Einstein'' in both cases above, can
+be replaced with a citation by using the \emph{cite} command. For example,
+\blockquote[\cite{soelvsten2022:TACAS}]{This lays the foundation on which we
+intend to develop external memory BDD algorithms usable in the fixpoint algorithms
+for symbolic model checking.}
+
+% ------------------------------------------------------------------------------
+% Bibliography
+\printbibliography
+\end{document}
