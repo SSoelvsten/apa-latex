@@ -1,0 +1,84 @@
+\documentclass[
+    a4paper, %
+    man,     % jou (journal), man (journal submission), stu (student paper), doc (normal)
+    donotrepeattitle
+]{apa7}
+\usepackage[british]{babel}
+\usepackage{times}
+\usepackage{csquotes}
+
+\usepackage[style=apa,backend=biber]{biblatex}
+\addbibresource{references.bib}
+
+% ------------------------------------------------------------------------------
+%                                  FRONT PAGE
+% ------------------
+% Title and Authors
+\title{APA Thesis Template}
+\shorttitle{APA Thesis}
+
+\author{Steffan Christ S{\o}lvsten}
+\affiliation{Department of Computer Science, Aarhus University}
+
+\leftheader{S{\o}lvsten}
+
+% Multiple authors?
+% \authorsnames{First1 Surname1, First2 Surname2}
+% \authorsaffiliation{...}
+
+\duedate{\today}
+
+\note{Name of supervisor(s)}
+
+% ------------------------------------------------------------------------------
+% Abstract
+\abstract{
+  Lorem ipsum...
+}
+
+% ------------------------------------------------------------------------------
+% Keywords
+\keywords{APA Style, Templates, One More Keyword}
+
+\begin{document}
+% ------------------------------------------------------------------------------
+% Front Page + Abstract
+\maketitle
+
+% ------------------------------------------------------------------------------
+% Table of Content
+\tableofcontents
+
+% ------------------------------------------------------------------------------
+% Introduction
+\newpage
+\section{Introduction}
+The introduction is one of the most important parts as it needs to capture your
+readers imagination and that way their attention.
+
+% ------------------------------------------------------------------------------
+% Section 1
+\newpage
+\section{Section Name}
+Your text here. You can do narrative citation using the \emph{textcite} command,
+e.g.\ \textcite{soelvsten2022:TACAS}, and a parenthetical citation using the
+\emph{parencite} command, e.g.\ \parencite{soelvsten2022:TACAS}.
+
+\subsection{Subsection Name}
+You can refer to an appendix using the \emph{ref} command to refer to the
+\emph{label} given to it further below (in the code). For example, there is
+Appendix~\ref{app:first}.
+
+% ------------------------------------------------------------------------------
+% Bibliography
+\printbibliography
+
+% ------------------------------------------------------------------------------
+% Appendix
+\appendix
+\section{First Appendix} \label{app:first}
+Some extra text here.
+
+\section{Second Appendix} \label{app:second}
+Even more extra information here.
+\end{document}

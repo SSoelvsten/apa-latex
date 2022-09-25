@@ -4,9 +4,12 @@ auto/
 *.bbl
 *.bcf
 *.blg
+*.dvi
 *.log
 *.out
 *.pdf
 *.run.xml
-*.synctex.gz
+*.synctex.*
+*.synctex(busy)
 *.tex.bak
+*.toc
