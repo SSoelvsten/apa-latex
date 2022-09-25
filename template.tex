@@ -4,6 +4,7 @@
 ]{apa7}
 \usepackage[british]{babel}
 \usepackage{times}
+\usepackage{csquotes}
 
 \usepackage[style=apa,backend=biber]{biblatex}
 \addbibresource{references.bib}
@@ -49,6 +50,20 @@ For example, here starts a new paragraph.
 e.g.~\parencite{soelvsten2022:TACAS}. To include page numbers in a citation, you 
 an extend the parenthetical citation with optional information,
 e.g.~\parencite[p.~64]{soelvsten2022:TACAS}.
+
+\subsection{Quotes}
+To add quotations, you want to use the \texttt{blockquote} command which will by
+itself make sure whether to show it inline, e.g.\
+\blockquote[Albert Einstein]{Two things are infinite: the universe and human
+stupidity; and I'm not sure about the universe.}
+If the text becomes longer than some threshold, then it is displayed
+as an indented block, such as the following
+\blockquote[Albert Einstein]{The important thing is not to stop questioning.
+Curiosity has its own reason for existence. One cannot help but be in awe when he
+contemplates the mysteries of eternity, of life, of the marvelous structure of
+reality. It is enough if one tries merely to comprehend a little of this mystery
+each day.}
+And here the very same paragraph continues.
 
 % ------------------------------------------------------------------------------
 % Bibliography
